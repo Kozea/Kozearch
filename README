@@ -1,5 +1,7 @@
 These are the source files for Arch Linux packages made at Kozea.
 
+See the HOWTO file for details on how to build and use these packages.
+
 Packages are:
 
 gedit-source-code-browser-git

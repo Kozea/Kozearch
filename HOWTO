@@ -1,0 +1,55 @@
+Arch Linux packages mini-HOWTO
+==============================
+
+In any case, the Arch Linux wiki is the reference:
+https://wiki.archlinux.org/index.php/Creating_Packages
+
+
+Source packages
+---------------
+
+Source packages are made of a PKGBUILD file (required) and some other
+(optional) files such as patches or *.install files (containing
+eg. post_install scripts)
+
+https://wiki.archlinux.org/index.php/PKGBUILD
+
+
+AUR
+---
+
+https://wiki.archlinux.org/index.php/AUR
+https://aur.archlinux.org/
+
+"The Arch User Repository (AUR) is a community-driven repository for
+Arch users."
+
+Source packages (in a tarball) are what is sent to the AUR.
+
+
+Building "binary" packages
+--------------------------
+
+Change to a directory containing a PKGBUILD and associated files and build
+with the "makepkg" command. See "man makepkg" for details. The result is
+a *.pkg.tar.xz file.
+
+
+Custom repository
+-----------------
+
+https://wiki.archlinux.org/index.php/Custom_local_repository#Custom_local_repository
+
+Get a set of *.pkg.tar.xz files together in a directory and create (or update)
+a repository database with the "repo-add" command. Eg:
+
+    repo-add kozea.db.tar.gz *.pkg.tar.xz
+
+Then serve this directory over HTTP, NFS or something and add it to
+/etc/pacman.conf on machines where you want to install the packages:
+
+    [kozea]
+    Server = file:///home/arch-repository
+
+While you’re at it, you might want to uncomment ShowSize and TotalDownload
+in the [options] category. See "man pacman.conf".
