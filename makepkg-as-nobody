@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ ! -f PKGBUILD ]
+then
+    echo "Change to a directory that has a PKGBUILD file to use this script."
+    exit 1
+fi
+
+sudo -u nobody makepkg "$@"
