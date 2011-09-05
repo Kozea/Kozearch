@@ -1,0 +1,5 @@
+#!/bin/sh
+cd $(dirname $0)
+sudo rm *.pkg.tar.xz
+sudo ln -s */*.pkg.tar.xz .
+sudo repo-add kozea.db.tar.gz *.pkg.tar.xz
