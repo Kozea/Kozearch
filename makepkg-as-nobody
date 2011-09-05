@@ -5,4 +5,6 @@ then
     exit 1
 fi
 
+sudo chgrp nobody $(pwd)
+sudo chmod g+w $(pwd)
 sudo -u nobody makepkg "$@"
