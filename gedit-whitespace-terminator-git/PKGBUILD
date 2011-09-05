@@ -4,12 +4,12 @@ pkgver=20110703
 pkgrel=2
 pkgdesc="Plugin for Gedit 3 that strips trailing whitespace on saving."
 arch=('any')
-url="https://gitorious.org/gedit-whitespace-terminator"
+url="https://github.com/Kozea/Gedit-WhiteSpace-Terminator"
 license=('custom:BSD')
 depends=('gedit>=3')
 makedepends=('git')
 
-_gitroot="git://gitorious.org/gedit-whitespace-terminator/gedit-whitespace-terminator.git"
+_gitroot="git://github.com/Kozea/Gedit-WhiteSpace-Terminator.git"
 _gitname="gedit-whitespace-terminator"
 
 build() {
