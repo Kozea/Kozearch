@@ -1,7 +1,7 @@
 # Maintainer: Simon Sapin <simon dot sapin at exyr dot org>
 pkgname=gedit-whitespace-terminator-git
-pkgver=20110703
-pkgrel=2
+pkgver=20110905
+pkgrel=1
 pkgdesc="Plugin for Gedit 3 that strips trailing whitespace on saving."
 arch=('any')
 url="https://github.com/Kozea/Gedit-WhiteSpace-Terminator"
