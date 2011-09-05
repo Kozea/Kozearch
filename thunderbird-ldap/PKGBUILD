@@ -1,0 +1,11 @@
+pkgname=thunderbird-ldap
+pkgver=6.0.1
+pkgrel=1
+pkgdesc="Workaround for Thunderbird bug #292127"
+arch=('any')
+license=('MPL' 'GPL')
+url="https://bugzilla.mozilla.org/show_bug.cgi?id=292127#c6"
+# Use the version number here so that this package breaks when Thunderbird
+# is updated
+depends=('thunderbird=6.0.1' 'libldap')
+install=thunderbird-ldap.install
