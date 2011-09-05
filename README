@@ -1,0 +1,19 @@
+These are the source files for Arch Linux packages made at Kozea.
+
+Packages are:
+
+gedit-source-code-browser-git
+    The *Source Code Browser* plugin for Gedit 3
+
+gedit-whitespace-terminator-git
+    The *Whitespace terminator* plugin for Gedit 3
+
+thunderbird-ldap
+    A dirty hack to work around Thunderbird bug #292127 ie. Thunderbird
+    segfaults when started by a Unix used identified with pam_ldap.
+
+    This package brutally overwrites Thunderbird’s libldap with the system one.
+    See https://bugzilla.mozilla.org/show_bug.cgi?id=292127#c6
+
+kozea-stuff
+    Dependency package to easily install stuff we usually need.
