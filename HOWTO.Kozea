@@ -1,0 +1,41 @@
+This repository is checked-out in /home/Kozearch on the entrecote server.
+The files are owned by root, so you need to use sudo to run eg. git pull.
+
+Since root has no SSH key that can push to github, this git repository
+was cloned with a read-only git URL.
+
+However, makepkg complains when it is run as root. To avoid file permission
+conflicts, we run makepkg as nobody. Everyone can "become" nobody with sudo,
+and built files are always owned by nobody. The package directories thus
+need to be owned by nobody.
+
+The makepkg-as-nobody makes this easier.
+
+Another problem is that makepkg creates binary packages in each package’s
+directory, but they need to be in the same directory to create a repository.
+
+The update-repository script creates symlinks to work-around this before
+updating the repository database.
+
+
+TL;DR
+=====
+
+Changing source packages
+------------------------
+
+/home/Kozearch on entrecote is cloned with a read-only git URL.
+
+To make changes to the repository, work in another clone in your own
+home directory, push to github and run "sudo git pull" in /home/Kozearch
+
+Building and updating
+---------------------
+
+1. Build a package: change to a package’s directory like
+   /home/Kozearch/kozea-stuff and run ../makepkg-as-nobody
+
+2. Update the repository database: run /home/Kozearch/update-repository
+   (from any directory)
+
+For both steps you may need to give your password for sudo.
