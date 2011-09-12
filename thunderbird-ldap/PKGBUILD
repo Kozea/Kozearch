@@ -1,5 +1,5 @@
 pkgname=thunderbird-ldap
-pkgver=6.0.1
+pkgver=42
 pkgrel=2
 pkgdesc="Workaround for Thunderbird bug #292127"
 arch=('any')
