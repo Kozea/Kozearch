@@ -1,8 +1,8 @@
 pkgname=kozea-stuff
-pkgver=20111004.3
+pkgver=20111004.5
 pkgrel=1
 license=('Apache')
 arch=('any')
 # Remember to bump pkgver when changing this!
-depends=('git' 'git-cola' 'meld' 'gedit-plugins' 'gedit-whitespace-terminator-git' 'gedit-source-code-browser-git' 'ipython' 'ipython2' 'python2-distribute' 'python2-pip' 'python2-virtualenv' 'thunderbird-ldap' 'nautilus-open-terminal' 'telepathy-idle' 'pacman-contrib' 'bepo-keymaps' 'ntpd')
+depends=('git' 'git-cola' 'meld' 'gedit-plugins' 'gedit-whitespace-terminator-git' 'gedit-source-code-browser-git' 'ipython' 'ipython2' 'python2-distribute' 'python2-pip' 'python2-virtualenv' 'thunderbird-ldap' 'nautilus-open-terminal' 'telepathy-idle' 'pacman-contrib' 'bepo-keymaps' 'ntp')
 # Remember to bump pkgver when changing this!
