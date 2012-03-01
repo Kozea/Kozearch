@@ -1,5 +1,5 @@
 # Maintainer: Simon Sapin <simon dot sapin at exyr dot org>
-pkgname='python-cairosvg'
+pkgname='python2-cairosvg'
 pkgver=0.3.1
 pkgrel=1
 pkgdesc="A Simple SVG Converter for Cairo"
@@ -7,12 +7,13 @@ arch=('any')
 url="http://cairosvg.org/"
 license=('LGPL3')
 source=("http://pypi.python.org/packages/source/C/CairoSVG/CairoSVG-${pkgver}.tar.gz")
-makedepends=('python')
-depends=('python' 'python-cairo')
+makedepends=('python2')
+depends=('python2' 'python2-cairo')
 md5sums=('51359fa55bc73a6bed788050cae015b5')
 
 
 package() {
   cd "$srcdir/CairoSVG-$pkgver"
-  python3 setup.py install --root="$pkgdir/" --optimize=1
+  python2 setup.py install --root="$pkgdir/" --optimize=1
+  rm -rf "$pkgdir/usr/bin"  # Avoid a conflict: only keep the Py3 executable.
 }
