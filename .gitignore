@@ -1,4 +1,10 @@
+/kozea.db*
 */pkg
 */src
-*/*.pkg.tar.xz
-/kozea.db*
+
+# Build packages:
+*.pkg.tar.xz
+
+# Downloaded sources:
+*.tar.gz
+*.zip
