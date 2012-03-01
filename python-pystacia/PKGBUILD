@@ -1,5 +1,5 @@
 # Maintainer: Simon Sapin <simon dot sapin at exyr dot org>
-pkgname='python-pystacia')
+pkgname='python-pystacia'
 pkgver=0.1
 pkgrel=1
 pkgdesc="Python raster imaging library"
