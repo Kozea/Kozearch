@@ -1,9 +1,6 @@
 post_install() {
     # Ugly hack: replace Thunderbird's libldap by the system one.
-    for libldap in /usr/lib/thunderbird-*/libldap60.so
-    do
-        ln -sf /usr/lib/libldap.so $libldap
-    done
+    ln -sf /usr/lib/libldap.so /usr/lib/thunderbird/libldap60.so
 }
 
 post_upgrade() {
